@@ -1,0 +1,6 @@
+Player includes : Reward
+Deck includes : Card, Reward
+CardDeck includes : Deck
+RewardDeck includes : Deck
+Game includes : Player, Card
+Rules includes : Game
