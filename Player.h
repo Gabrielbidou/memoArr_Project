@@ -12,7 +12,8 @@ public:
 	string side;
 	int numRubis;
 
-	Player(string name, string side, int numRubis) : name(name), side(side), numRubis(numRubis) {};
+	Player(){}
+	Player(string name, string side, int numRubis) : name(name), side(side), numRubis(numRubis) {}
 
 	string getName() const { return name; }
 	void setActive(bool flag) { active = flag; }
