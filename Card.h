@@ -15,8 +15,8 @@ private:
 	char backgroundArray[5] = { 'r', 'g', 'p', 'b', 'y' };
 
 	Card(FaceAnimal animal, FaceBackground background) : animal(animal), background(background) {
-		for (int i = 0; i < 3; i++)
-			for (int j = 0; j < 3; j++)
+		for (int i = 0; i < 4; i++)
+			for (int j = 0; j < 4; j++)
 				card[i][j] = backgroundArray[background];
 		card[1][1] = animalArray[animal];
 	};
