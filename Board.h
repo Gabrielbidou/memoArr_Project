@@ -1,18 +1,19 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "Card.h"
+#include "Deck.h"
 
 using namespace std;
 
-typedef enum { A = (char) 'A', B = (char) 'B', C = (char) 'C', D = (char) 'D', E = (char) 'E' } Letter;
-typedef enum { one = (char) '1', two = (char) '2', three = (char) '3', four = (char) '4', five = (char) '5' } Number;
+typedef enum { A, B, C, D, E } Letter;
+typedef enum { one, two, three, four, five } Number;
 
 class Board {
 private:
 	Card *cards[5][5];
 	bool faceStatus[5][5];
-	char letters[5] = { 'A', 'B', 'C', 'D', 'E' };
+	int lettersIndex[5] = { 1, 5, 9, 13, 17 };
+	int numbersIndex[5] = { 2, 6, 10, 14, 18 };
 
 public:
 	string display[20];
