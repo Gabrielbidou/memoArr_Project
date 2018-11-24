@@ -14,15 +14,7 @@ Board::Board()
 	display[1][0] = 'A'; display[5][0] = 'B'; display[9][0] = 'C'; display[13][0] = 'D'; display[17][0] = 'E';
 
 	//Ajouter les chiffres de la dernière rangée
-	display[19][2] = '1'; display[19][6] = '2'; display[19][10] = '3'; display[19][14] = '4'; display[19][18] = '5';
-
-	//Initialiser la board avec tous des Z
-	reset();
-
-	//Initialiser toutes les faces cachées
-	for (int i = 0; i < 5; i++)
-		for (int j = 0; j < 5; j++)
-			faceStatus[i][j] = false;
+	display[19] = {"  1   2   3   4   5\n"};
 }
 
 const bool Board::isFaceUp(const Letter & letter, const Number & number)
@@ -60,8 +52,11 @@ bool Board::turnFaceUp(const Letter & letter, const Number & number)
 	else {
 		int indexLetter = lettersIndex[letter] - 1;
 		int indexNumber = numbersIndex[number] - 1;
+
+		Card &currentCard = *cards[letter][number];
+			
 		for (int i = 0; i < 3; i++) {
-			display[indexLetter].replace(indexNumber, 3, cards[letter][number]->operator()(i));
+			display[indexLetter].replace(indexNumber, 3, currentCard(i));
 
 			indexLetter++;
 		}
@@ -130,11 +125,16 @@ void Board::setCard(const Letter & letter, const Number & number, Card * card)
 
 void Board::reset()
 {
+	//Configure toutes les cartes comme étant face cachée
+	for (int i = 0; i < 5; i++)
+		for (int j = 0; j < 5; j++)
+			faceStatus[i][j] = false;
+
 	//Ajouter tous les z pour les cartes face cachée
 	for (int i = 0; i < 20; i += 4) {
 		for (int j = 0; j < 3; j++) {
 			for (int k = 1; k < 20; k += 4) {
-				const string s("zzz");
+				string s("zzz");
 				display[i + j].replace(k, 3, s);
 			}
 		}

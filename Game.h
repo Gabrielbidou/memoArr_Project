@@ -10,25 +10,41 @@ using namespace std;
 class Game {
 
 	//Variables de classe
-	Board board;
+	Board *board;
 	vector<Player> players;
-	//Card currentCard;
-	//Card previousCard;
+	Card* currentCard;
+	Card* previousCard;
+
 	int numPlayers;
 	int currentRound;
 
 public:
-	Game(int numPlayers) : numPlayers(numPlayers), currentRound(0) {
-		
+	Game(int numPlayers, Board *currentBoard) : numPlayers(numPlayers), currentRound(0) {
+		board = currentBoard;
+	}
+
+	~Game() {
+		delete board;
+	}
+	//Overload de l'opérateur <<
+	friend ostream& operator<<(ostream& os, Game& game)
+	{
+		game.print();
+		return os;
 	}
 
 	int getRound() { return currentRound; }
 	void addPlayer(const Player& player) { 
 		players.push_back(player);  
 	}
-	Player& getPLayer();
+	Player& getPlayer(Side side);
 	const Card* getPreviousCard();
 	const Card* getCurrentCard();
-	void setCurrentCard(const Card*);
+	void setCurrentCard(const Card* card);
+	Card* getCard(const Letter& letter, const Number& number);
+	void setCard(const Letter& letter, const Number& number, Card* card);
+
+private:
+	void print();
 
 };

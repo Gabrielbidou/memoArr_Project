@@ -27,7 +27,7 @@ private:
 	}
 
 public:
-	string& operator()(int row) {
+	const string& operator()(int row) {
 		return this->card[row];
 	}
 
