@@ -36,5 +36,6 @@ public:
 
 private:
 	void getCardRange(const Letter &letter, const Number &number);
+	void updateScreen();
 	void print();
 };

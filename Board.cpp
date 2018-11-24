@@ -16,14 +16,8 @@ Board::Board()
 	//Ajouter les chiffres de la dernière rangée
 	display[19][2] = '1'; display[19][6] = '2'; display[19][10] = '3'; display[19][14] = '4'; display[19][18] = '5';
 
-	//Ajouter tous les z pour les cartes face cachée
-	for (int i = 0; i < 20; i += 4) {
-		for (int j = 0; j < 3; j++) {
-			for (int k = 1; k < 20; k += 4) {
-				display[i + j].replace(k, 2, "zzz");
-			}
-		}
-	}
+	//Initialiser la board avec tous des Z
+	reset();
 
 	//Initialiser toutes les faces cachées
 	for (int i = 0; i < 5; i++)
@@ -33,6 +27,7 @@ Board::Board()
 
 const bool Board::isFaceUp(const Letter & letter, const Number & number)
 {
+	//Vérifie si la combinaison Lettre et Nombre est valide
 	try
 	{
 		getCardRange(letter, number);
@@ -40,18 +35,71 @@ const bool Board::isFaceUp(const Letter & letter, const Number & number)
 	}
 	catch (const std::out_of_range &error)
 	{
-		
+		throw(error);
 	}
 }
 
 bool Board::turnFaceUp(const Letter & letter, const Number & number)
 {
-	return false;
+	//Vérifie si la combinaison Lettre et Nombre est valide
+	try
+	{
+		getCardRange(letter, number);
+	}
+	catch (const std::out_of_range &error)
+	{
+		throw(error);
+	}
+	
+	//Vérifie si la carte est déjà face dévoilée
+	if (faceStatus[letter][number] == true) {
+		return false;
+	}
+
+	//Modifie le tableau de string selon la carte
+	else {
+		int indexLetter = lettersIndex[letter] - 1;
+		int indexNumber = numbersIndex[number] - 1;
+		for (int i = 0; i < 3; i++) {
+			display[indexLetter].replace(indexNumber, 3, cards[letter][number]->operator()(i));
+
+			indexLetter++;
+		}
+		faceStatus[letter][number] = true;
+		updateScreen();
+		return true;
+	}
 }
 
 bool Board::turnFaceDown(const Letter & letter, const Number & number)
 {
-	return false;
+	//Vérifie si la combinaison Lettre et Nombre est valide
+	try
+	{
+		getCardRange(letter, number);
+	}
+	catch (const std::out_of_range &error)
+	{
+		throw(error);
+	}
+
+	//Vérifie si la carte est déjà face cachée
+	if (faceStatus[letter][number] == false) {
+		return false;
+	}
+
+	//Modifie le tableau de string selon la carte
+	else {
+		int indexLetter = lettersIndex[letter] - 1;
+		int indexNumber = numbersIndex[number] - 1;
+		for (int i = 0; i < 3; i++) {
+			display[indexLetter].replace(indexNumber, 3, "zzz");
+
+			indexLetter++;
+		}
+		faceStatus[letter][number] = false;
+		return true;
+	}
 }
 
 Card * Board::getCard(const Letter & letter, const Number & number)
@@ -82,20 +130,34 @@ void Board::setCard(const Letter & letter, const Number & number, Card * card)
 
 void Board::reset()
 {
+	//Ajouter tous les z pour les cartes face cachée
+	for (int i = 0; i < 20; i += 4) {
+		for (int j = 0; j < 3; j++) {
+			for (int k = 1; k < 20; k += 4) {
+				const string s("zzz");
+				display[i + j].replace(k, 3, s);
+			}
+		}
+	}
 }
 
 //Méthodes privées
 void Board::getCardRange(const Letter & letter, const Number & number)
 {
 	if (letter == C && number == three) {
-		out_of_range error();
+		out_of_range error(" ");
 		cout << "This space is unusable";
 		throw(error);
 	}
 	if (letter < 0 || letter > 4 || number < 0 || number > 4) {
-		out_of_range error();
+		out_of_range error(" ");
 		throw(error);
 	}
+}
+
+void Board::updateScreen()
+{
+
 }
 
 void Board::print()
