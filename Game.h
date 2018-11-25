@@ -38,8 +38,8 @@ public:
 		players.push_back(player);  
 	}
 	Player& getPlayer(Side side);
-	const Card* getPreviousCard();
-	const Card* getCurrentCard();
+	Card* getPreviousCard();
+	Card* getCurrentCard();
 	void setCurrentCard(const Card* card);
 	Card* getCard(const Letter& letter, const Number& number);
 	void setCard(const Letter& letter, const Number& number, Card* card);

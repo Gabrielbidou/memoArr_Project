@@ -4,7 +4,17 @@
 
 bool Rules::isValid(Game & game)
 {
-	return false;
+	Card& previousCard = *game.getPreviousCard();
+	Card& currentCard = *game.getCurrentCard();
+	char animalPrevious = previousCard(1)[1];
+	char backgroundPrevious = previousCard(1)[0];
+	char animalCurrent = currentCard(1)[1];
+	char backgroundCurrent = currentCard(1)[0];
+
+	if (animalPrevious == animalCurrent || backgroundPrevious == backgroundCurrent)
+		return true;
+	else
+		return false;
 }
 
 bool Rules::gameOver(Game & game)
