@@ -4,11 +4,17 @@
 using namespace std;
 
 class Rules {
+	const int numPlayers;
+	static int currentSide;
+	static int numActivePlayers;
 public:
-	Rules() {}
+	Rules(int numPlayers) : numPlayers(numPlayers) {
+		currentSide = 0; 
+		numActivePlayers = numPlayers;
+	}
 
-	bool isValid(Game& game);
-	bool gameOver(Game& game);
-	bool roundOver(Game& game);
+	bool isValid(const Game& game);
+	bool gameOver(const Game& game);
+	bool roundOver(const Game& game);
 	const Player& getNextPlayer(Game& game);
 };

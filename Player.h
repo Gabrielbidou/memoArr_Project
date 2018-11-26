@@ -28,9 +28,9 @@ public:
 	}
 
 	string getName() const { return name; }
-	bool isActive() { return active; }
+	bool isActive() const { return active; }
 	int getNRubis() { return numRubis; }
-	Side getSide() { return side; }
+	Side getSide() const { return side; }
 	void setSide(Side side) { this->side = side; }
 	void setActive(bool flag) { this->active = flag; }
 	void addReward(const Reward &reward);

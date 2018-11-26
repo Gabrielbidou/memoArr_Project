@@ -2,32 +2,55 @@
 #include <iostream>
 #include "Rules.h"
 
-bool Rules::isValid(Game & game)
+int Rules::currentSide;
+int Rules::numActivePlayers;
+
+bool Rules::isValid(const Game & game)
 {
-	Card& previousCard = *game.getPreviousCard();
-	Card& currentCard = *game.getCurrentCard();
+	const Card* previousCardPtr = game.getPreviousCard();
+
+	//Vérifie si la carte courante est la première carte tournée
+	if (previousCardPtr == nullptr)
+		return true;
+
+	const Card& previousCard = *previousCardPtr;
+	const Card& currentCard = *game.getCurrentCard();
+
 	char animalPrevious = previousCard(1)[1];
 	char backgroundPrevious = previousCard(1)[0];
+
 	char animalCurrent = currentCard(1)[1];
 	char backgroundCurrent = currentCard(1)[0];
 
 	if (animalPrevious == animalCurrent || backgroundPrevious == backgroundCurrent)
 		return true;
+	else {
+		numActivePlayers--;
+		return false;
+	}
+		
+}
+
+bool Rules::gameOver(const Game & game)
+{
+	if (game.getRound() > 3)
+		return true;
 	else
 		return false;
 }
 
-bool Rules::gameOver(Game & game)
+bool Rules::roundOver(const Game & game)
 {
-	return false;
+	if (numActivePlayers == 1) {
+		numActivePlayers = numPlayers;
+		currentSide = 0;
+		return true;
+	}
+	else
+		return false;
 }
 
-bool Rules::roundOver(Game & game)
+const Player& Rules::getNextPlayer(Game & game)
 {
-	return false;
-}
-
-const Player & Rules::getNextPlayer(Game & game)
-{
-	return game.getPlayer(Top);
+	return game.getPlayer(Side((currentSide++) % numPlayers));
 }

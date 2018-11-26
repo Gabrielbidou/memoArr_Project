@@ -27,24 +27,15 @@ const bool Board::isFaceUp(const Letter & letter, const Number & number)
 	}
 	catch (const std::out_of_range &error)
 	{
-		throw(error);
+		error.what();
+		return true;
 	}
 }
 
 bool Board::turnFaceUp(const Letter & letter, const Number & number)
-{
-	//Vérifie si la combinaison Lettre et Nombre est valide
-	try
-	{
-		getCardRange(letter, number);
-	}
-	catch (const std::out_of_range &error)
-	{
-		throw(error);
-	}
-	
+{	
 	//Vérifie si la carte est déjà face dévoilée
-	if (faceStatus[letter][number] == true) {
+	if (isFaceUp(letter, number)) {
 		return false;
 	}
 
@@ -61,25 +52,14 @@ bool Board::turnFaceUp(const Letter & letter, const Number & number)
 			indexLetter++;
 		}
 		faceStatus[letter][number] = true;
-		updateScreen();
 		return true;
 	}
 }
 
 bool Board::turnFaceDown(const Letter & letter, const Number & number)
 {
-	//Vérifie si la combinaison Lettre et Nombre est valide
-	try
-	{
-		getCardRange(letter, number);
-	}
-	catch (const std::out_of_range &error)
-	{
-		throw(error);
-	}
-
-	//Vérifie si la carte est déjà face cachée
-	if (faceStatus[letter][number] == false) {
+	//Vérifie si la carte est déjà cachée
+	if (!isFaceUp(letter, number)) {
 		return false;
 	}
 
@@ -139,6 +119,11 @@ void Board::reset()
 			}
 		}
 	}
+
+	//C3 ne contient aucune carte
+	display[lettersIndex[C] - 1].replace(numbersIndex[three] - 1, 3, "   ");
+	display[lettersIndex[C]].replace(numbersIndex[three] - 1, 3, "   ");
+	display[lettersIndex[C] + 1].replace(numbersIndex[three] - 1, 3, "   ");
 }
 
 //Méthodes privées
@@ -146,18 +131,20 @@ void Board::getCardRange(const Letter & letter, const Number & number)
 {
 	if (letter == C && number == three) {
 		out_of_range error(" ");
-		cout << "This space is unusable";
+		cout << "THIS SPACE IS UNUSABLE" << endl;
 		throw(error);
 	}
 	if (letter < 0 || letter > 4 || number < 0 || number > 4) {
 		out_of_range error(" ");
+		cout << "INVALID CARD" << endl;
 		throw(error);
 	}
 }
 
 void Board::updateScreen()
 {
-
+	system("cls");
+	print();
 }
 
 void Board::print()

@@ -8,12 +8,14 @@ void Player::addReward(const Reward & reward)
 
 void Player::setDisplayMode(bool endOfGame)
 {
+	this->endOfGame = endOfGame;
 }
 
 void Player::print()
 {
-	if (endOfGame == true) {
-
+	if (this->endOfGame == true) {
+		cout << this->getName() << ": ";
+		cout << this->getNRubis() << " rubies" << endl;
 	}
 	else {
 		cout << this->getName() << ": ";

@@ -2,25 +2,29 @@
 #include <iostream>
 #include "Game.h"
 
+int Game::currentRound;
+
 Player & Game::getPlayer(Side side)
 {
 	return players[side];
 }
 
-const Card * Game::getPreviousCard()
+const Card * Game::getPreviousCard() const
 {
-	return nullptr;
+	return previousCard;
 }
 
-const Card * Game::getCurrentCard()
+const Card * Game::getCurrentCard() const
 {
-	return nullptr;
+	return currentCard;
 }
 
 void Game::setCurrentCard(const Card * card)
 {
+	if (card == nullptr)
+		currentCard = nullptr;
 	previousCard = currentCard;
-	//currentCard = card;
+	currentCard = card;
 }
 
 Card * Game::getCard(const Letter & letter, const Number & number)
