@@ -5,13 +5,18 @@
 #include "CardDeck.h"
 #include "Card.h"
 
-CardDeck & CardDeck::make_CardDeck()
-{
-	int i = 0;
+CardDeck::CardDeck() {
+
 	for (int a = 0; a < 5; a++) {
 		for (int b = 0; b < 5; b++) {
-			cardDeck.insert(i, Card(FaceAnimal(a), FaceBackground(b)));
-			i++;
+			c_deck.push_back(Card(FaceAnimal(a), FaceBackground(b)));
 		}
 	}
+}
+
+
+CardDeck & CardDeck::make_CardDeck()
+{
+	CardDeck* newDeck = new CardDeck();
+	return *newDeck;
 }

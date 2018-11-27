@@ -6,7 +6,7 @@
 class CardDeck : public Deck<Card> {
 
 private:
-	vector<Card> cardDeck;
+	CardDeck();
 
 public:
 	static CardDeck&  make_CardDeck();

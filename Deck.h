@@ -6,11 +6,10 @@
 template <typename C>
 class Deck {
 
-private:
-	vector<C> c_deck{ nullptr };
-	C* c_ptr{c_deck.data};
-
 public:
+	std::vector<C> c_deck;
+	C* cptr = &c_deck[0];
+
 	virtual void shuffle();
 	virtual C* getNext();
 	virtual bool isEmpty() const;
