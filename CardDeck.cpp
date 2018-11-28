@@ -14,7 +14,6 @@ CardDeck::CardDeck() {
 	}
 }
 
-
 CardDeck & CardDeck::make_CardDeck()
 {
 	CardDeck* newDeck = new CardDeck();

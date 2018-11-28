@@ -1,14 +1,15 @@
 #pragma once
 
-//typedef enum { one = 1, two, three, four } type_rubies;
-
 class Reward {
-	
+	friend class RewardDeck;
+
 private:
-	//type_rubies numRubies;
-	Reward() {}
-	//Reward(type_rubies r) { numRubies = r; }
+	int numR;
+	Reward() {};
+	Reward(int numR1) :numR(numR1) {};
 
 public:
 
-};		
+	int getNumRubies()const { return numR; }
+};
+	

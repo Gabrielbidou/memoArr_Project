@@ -22,6 +22,7 @@ C* Deck<C>::getNext()
 	else {
 		next = cptr++;
 	}
+
 	return next;
 }
 
