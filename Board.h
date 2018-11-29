@@ -33,9 +33,9 @@ public:
 	Card* getCard(const Letter &letter, const Number &number);
 	void setCard(const Letter &letter, const Number &number, Card* card);
 	void reset();
-
+	void updateScreen();
 private:
 	void getCardRange(const Letter &letter, const Number &number);
-	void updateScreen();
+	
 	void print();
 };
