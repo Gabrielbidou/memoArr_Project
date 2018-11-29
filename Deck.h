@@ -5,11 +5,10 @@
 
 template <typename C>
 class Deck {
-
-public:
+protected:
 	std::vector<C> c_deck;
 	C* cptr;
-
+public:
 	virtual void shuffle();
 	virtual C* getNext();
 	virtual bool isEmpty() const;
