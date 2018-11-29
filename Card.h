@@ -3,12 +3,15 @@
 
 using namespace std;
 
+
 typedef enum { Krab, Penguin, Octopus, Turtle, Walrus } FaceAnimal;
 typedef enum { red, green, purple, blue, yellow } FaceBackground;
 
 class Card {
+	friend class CardDeck;
 
 private:
+
 	FaceAnimal animal;
 	FaceBackground background;
 
