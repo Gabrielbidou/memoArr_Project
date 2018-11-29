@@ -4,10 +4,14 @@
 #include "Reward.h"
 
 RewardDeck::RewardDeck() {
-	c_deck.insert(c_deck.end(), 3, Reward(1));
-	c_deck.insert(c_deck.end(), 2, Reward(2));
+	c_deck.push_back(Reward(1));
+	c_deck.push_back(Reward(1));
+	c_deck.push_back(Reward(1));
+	c_deck.push_back(Reward(2));
+	c_deck.push_back(Reward(2));
 	c_deck.push_back(Reward(3));
 	c_deck.push_back(Reward(4));
+	cptr = &c_deck.front();
 }
 
 RewardDeck& RewardDeck::make_RewardDeck() {

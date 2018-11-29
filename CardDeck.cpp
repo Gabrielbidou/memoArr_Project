@@ -12,6 +12,7 @@ CardDeck::CardDeck() {
 			c_deck.push_back(Card(FaceAnimal(a), FaceBackground(b)));
 		}
 	}
+	cptr = &c_deck.front();
 }
 
 CardDeck & CardDeck::make_CardDeck()

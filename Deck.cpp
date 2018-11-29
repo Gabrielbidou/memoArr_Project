@@ -10,14 +10,17 @@ void Deck<C>::shuffle()
 {
 	std::srand(std::time(0));
 	std::random_shuffle(c_deck.begin(), c_deck.end());
+	cptr = &c_deck.front();
 }
 
 template<typename C>
 C* Deck<C>::getNext()
 {
 	C* next;
+
 	if (cptr == &c_deck.back()) {
-		next = nullptr;
+		next = cptr;
+		cptr = nullptr;
 	}
 	else {
 		next = cptr++;
@@ -29,7 +32,7 @@ C* Deck<C>::getNext()
 template<typename C>
 bool Deck<C>::isEmpty() const
 {
-	return c_deck.empty();
+	return (cptr == nullptr);
 }
 
 template class Deck<Card>;

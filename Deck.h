@@ -8,7 +8,7 @@ class Deck {
 
 public:
 	std::vector<C> c_deck;
-	C* cptr = &c_deck[0];
+	C* cptr;
 
 	virtual void shuffle();
 	virtual C* getNext();
