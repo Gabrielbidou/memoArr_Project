@@ -4,6 +4,7 @@
 
 void Player::addReward(const Reward & reward)
 {
+	this->numRubis += reward.getNumRubies();
 }
 
 void Player::setDisplayMode(bool endOfGame)

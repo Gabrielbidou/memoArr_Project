@@ -33,7 +33,7 @@ bool Rules::isValid(const Game & game)
 
 bool Rules::gameOver(const Game & game)
 {
-	if (game.getRound() > 3)
+	if (game.getRound() > 6)
 		return true;
 	else
 		return false;
