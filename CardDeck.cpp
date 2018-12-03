@@ -17,6 +17,8 @@ CardDeck::CardDeck() {
 
 CardDeck & CardDeck::make_CardDeck()
 {
-	CardDeck* newDeck = new CardDeck();
-	return *newDeck;
+	if (CardDeck::cd_ptr == nullptr) {
+		CardDeck::cd_ptr = new CardDeck();
+	}
+	return *CardDeck::cd_ptr;
 }
