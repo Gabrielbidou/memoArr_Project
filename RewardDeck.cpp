@@ -3,6 +3,8 @@
 #include "RewardDeck.h"
 #include "Reward.h"
 
+RewardDeck* RewardDeck::rd_ptr;
+
 RewardDeck::RewardDeck() {
 	c_deck.push_back(Reward(1));
 	c_deck.push_back(Reward(1));

@@ -5,6 +5,8 @@
 #include "CardDeck.h"
 #include "Card.h"
 
+CardDeck* CardDeck::cd_ptr;
+
 CardDeck::CardDeck() {
 
 	for (int a = 0; a < 5; a++) {
