@@ -15,6 +15,9 @@ RewardDeck::RewardDeck() {
 }
 
 RewardDeck& RewardDeck::make_RewardDeck() {
-	RewardDeck *newRDeck = new RewardDeck();
-	return *newRDeck;
+	if (RewardDeck::rd_ptr == nullptr) {
+		RewardDeck::rd_ptr = new RewardDeck();
+	}
+	return *RewardDeck::rd_ptr;
+	
 }
