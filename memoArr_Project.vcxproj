@@ -165,7 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
-    <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardDeck.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="ExpertBoard.cpp" />
@@ -178,7 +177,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Reward.cpp" />
     <ClCompile Include="RewardDeck.cpp" />
     <ClCompile Include="Rules.cpp" />
   </ItemGroup>

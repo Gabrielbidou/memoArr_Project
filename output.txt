@@ -1,0 +1,302 @@
+Please enter the number of players (between 2 and 4): 3
+Please select the display mode (B = Base / E = Expert): b
+Please enter the name player 1: Gab
+Please enter the name player 2: Jean
+Please enter the name player 3: Joel
+
+A
+
+
+
+B
+
+
+
+C
+
+
+
+D
+
+
+
+E
+
+  1   2   3   4   5
+
+Gab: Top(active)
+Jean: Bottom(active)
+Joel: Left(active)
+Press any key to continue . . .
+ zzz ppp ggg yyy zzz
+Azzz pWp gTg yTy zzz
+ zzz ppp ggg yyy zzz
+
+ zzz zzz zzz zzz zzz
+Bzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz     zzz zzz
+Czzz zzz     zzz zzz
+ zzz zzz     zzz zzz
+
+ zzz zzz zzz zzz zzz
+Dzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Ezzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+  1   2   3   4   5
+
+Gab, if you've seen your cards, Press any key to continue . . .
+ zzz zzz zzz zzz zzz
+Azzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Bzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz     zzz zzz
+Czzz zzz     zzz zzz
+ zzz zzz     zzz zzz
+
+ zzz zzz zzz zzz zzz
+Dzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz bbb rrr ggg zzz
+Ezzz bOb rOr gOg zzz
+ zzz bbb rrr ggg zzz
+  1   2   3   4   5
+
+Jean, if you've seen your cards, Press any key to continue . . .
+ zzz zzz zzz zzz zzz
+Azzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ ggg zzz zzz zzz zzz
+BgPg zzz zzz zzz zzz
+ ggg zzz zzz zzz zzz
+
+ ppp zzz     zzz zzz
+CpTp zzz     zzz zzz
+ ppp zzz     zzz zzz
+
+ ggg zzz zzz zzz zzz
+DgWg zzz zzz zzz zzz
+ ggg zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Ezzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+  1   2   3   4   5
+
+Joel, if you've seen your cards, Press any key to continue . . .
+ zzz zzz zzz zzz zzz
+Azzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Bzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz     zzz zzz
+Czzz zzz     zzz zzz
+ zzz zzz     zzz zzz
+
+ zzz zzz zzz zzz zzz
+Dzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Ezzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+  1   2   3   4   5
+
+Gab: Top(active)
+Jean: Bottom(active)
+Joel: Left(active)
+Gab's turn !
+Enter the desired card: A1
+ ppp zzz zzz zzz zzz
+ApOp zzz zzz zzz zzz
+ ppp zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Bzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz     zzz zzz
+Czzz zzz     zzz zzz
+ zzz zzz     zzz zzz
+
+ zzz zzz zzz zzz zzz
+Dzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Ezzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+  1   2   3   4   5
+
+Gab: Top(active)
+Jean: Bottom(active)
+Joel: Left(active)
+Jean's turn !
+Enter the desired card: B5
+Jean got a wrong card and is out for the round
+ ppp zzz zzz zzz zzz
+ApOp zzz zzz zzz zzz
+ ppp zzz zzz zzz zzz
+
+ zzz zzz zzz zzz bbb
+Bzzz zzz zzz zzz bKb
+ zzz zzz zzz zzz bbb
+
+ zzz zzz     zzz zzz
+Czzz zzz     zzz zzz
+ zzz zzz     zzz zzz
+
+ zzz zzz zzz zzz zzz
+Dzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Ezzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+  1   2   3   4   5
+
+Gab: Top(active)
+Jean: Bottom(inactive)
+Joel: Left(active)
+Joel's turn !
+Enter the desired card: C4
+ ppp zzz zzz zzz zzz
+ApOp zzz zzz zzz zzz
+ ppp zzz zzz zzz zzz
+
+ zzz zzz zzz zzz bbb
+Bzzz zzz zzz zzz bKb
+ zzz zzz zzz zzz bbb
+
+ zzz zzz     bbb zzz
+Czzz zzz     bWb zzz
+ zzz zzz     bbb zzz
+
+ zzz zzz zzz zzz zzz
+Dzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Ezzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+  1   2   3   4   5
+
+Gab: Top(active)
+Jean: Bottom(inactive)
+Joel: Left(active)
+Gab's turn !
+Enter the desired card: D3
+ ppp zzz zzz zzz zzz
+ApOp zzz zzz zzz zzz
+ ppp zzz zzz zzz zzz
+
+ zzz zzz zzz zzz bbb
+Bzzz zzz zzz zzz bKb
+ zzz zzz zzz zzz bbb
+
+ zzz zzz     bbb zzz
+Czzz zzz     bWb zzz
+ zzz zzz     bbb zzz
+
+ zzz zzz bbb zzz zzz
+Dzzz zzz bTb zzz zzz
+ zzz zzz bbb zzz zzz
+
+ zzz zzz zzz zzz zzz
+Ezzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+  1   2   3   4   5
+
+Gab: Top(active)
+Jean: Bottom(inactive)
+Joel: Left(active)
+Joel's turn !
+Enter the desired card: E2
+ ppp zzz zzz zzz zzz
+ApOp zzz zzz zzz zzz
+ ppp zzz zzz zzz zzz
+
+ zzz zzz zzz zzz bbb
+Bzzz zzz zzz zzz bKb
+ zzz zzz zzz zzz bbb
+
+ zzz zzz     bbb zzz
+Czzz zzz     bWb zzz
+ zzz zzz     bbb zzz
+
+ zzz zzz bbb zzz zzz
+Dzzz zzz bTb zzz zzz
+ zzz zzz bbb zzz zzz
+
+ zzz bbb zzz zzz zzz
+Ezzz bOb zzz zzz zzz
+ zzz bbb zzz zzz zzz
+  1   2   3   4   5
+
+Gab: Top(active)
+Jean: Bottom(inactive)
+Joel: Left(active)
+Gab's turn !
+Enter the desired card: B1
+Gab got a wrong card and is out for the round
+ ppp zzz zzz zzz zzz
+ApOp zzz zzz zzz zzz
+ ppp zzz zzz zzz zzz
+
+ ggg zzz zzz zzz bbb
+BgPg zzz zzz zzz bKb
+ ggg zzz zzz zzz bbb
+
+ zzz zzz     bbb zzz
+Czzz zzz     bWb zzz
+ zzz zzz     bbb zzz
+
+ zzz zzz bbb zzz zzz
+Dzzz zzz bTb zzz zzz
+ zzz zzz bbb zzz zzz
+
+ zzz bbb zzz zzz zzz
+Ezzz bOb zzz zzz zzz
+ zzz bbb zzz zzz zzz
+  1   2   3   4   5
+
+Gab: Top(inactive)
+Jean: Bottom(inactive)
+Joel: Left(active)
+Winner of this round is: Joel
+Press any key to continue . . .
+ zzz ppp ggg yyy zzz
+Azzz pWp gTg yTy zzz
+ zzz ppp ggg yyy zzz
+
+ zzz zzz zzz zzz zzz
+Bzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz     zzz zzz
+Czzz zzz     zzz zzz
+ zzz zzz     zzz zzz
+
+ zzz zzz zzz zzz zzz
+Dzzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+
+ zzz zzz zzz zzz zzz
+Ezzz zzz zzz zzz zzz
+ zzz zzz zzz zzz zzz
+  1   2   3   4   5
+
+Gab, if you've seen your cards, Press any key to continue . . .
